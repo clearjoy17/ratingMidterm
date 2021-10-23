@@ -1,0 +1,30 @@
+<div class="body">
+  <h1>RATE THE MOVIE</h1>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+              <img src="../assets/images/poster.jpg" class="img1" alt="..." />
+              <!-- <h3>ALICE IN BORDERLAND</h3> -->
+          </div>
+          <div class="col-md-9">
+            <h3>ALICE IN BORDERLAND</h3>
+              <p>
+                  Alice in Borderland is a 2020 Japanese science fiction suspense-thriller drama streaming televison series based on the manga of the same name by Haro Aso. Directed by Shinsuke Sato, the series stars Kento Yamazaki and Tao Tsuchiya as allies trapped in an abandoned
+                  Tokyo where they are forced to compete in dangerous games, the type and difficulty of which are determined by playing cards. After surviving their first game, players receive "visas," which are extended the more they compete; if the visas expire, the individuals
+                  are executed by red lasers being shot from the sky.
+              </p>
+              <p>
+                  Obsessed gamer Arisu suddenly finds himself in a strange, emptied-out version of Tokyo in which he and his friends must compete in dangerous games in order to survive.
+              </p>
+              <hr>
+              <ngb-rating [max]="5" [(rate)]="currentRate" class="rate">
+                  <ng-template let-fill="fill" let-index="index">
+                      <span class="star" [class.filled]="fill === 100">&#10022;</span>
+                  </ng-template>
+              </ngb-rating>
+
+              <pre class="rateNum">Rating: <b>{{currentRate}} of 5</b></pre>
+          </div>
+      </div>
+  </div>
+</div>
